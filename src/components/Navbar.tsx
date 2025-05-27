@@ -6,11 +6,12 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import type { Theme } from '@mui/material/styles';
 
 export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="fixed" sx={(theme: Theme) => ({zIndex: theme.zIndex.drawer + 1,})}>
         <Toolbar>
           <IconButton
             size="large"

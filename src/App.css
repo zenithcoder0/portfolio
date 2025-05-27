@@ -1,8 +1,10 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding-top: 64px; /* leave space for AppBar if it's fixed */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: left; /* stop centering everything */
 }
 
 .logo {
