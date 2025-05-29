@@ -8,6 +8,11 @@ const cardData = [
     link: "https://zenithcoder0.github.io/initiative-tracker/", 
     image: TrackerImage},
   {title: "Initiative Tracker 2", summary: "Revisited iniative tracker,", link: "https://zenithcoder0.github.io/initiative-tracker-2/",},
+  {title: "Inventory Tracker", summary: "In Progress", link: "",},
+  {title: "Inventory Tracker", summary: "In Progress", link: "",},
+  {title: "Inventory Tracker", summary: "In Progress", link: "",},
+  {title: "Inventory Tracker", summary: "In Progress", link: "",},
+  {title: "Inventory Tracker", summary: "In Progress", link: "",},
   {title: "Inventory Tracker", summary: "In Progress", link: "",}
 ];
 
@@ -15,7 +20,7 @@ function App() {
   return (
     <>
       <div>Heres my stuff. This is a work in progress</div>
-      <section style={{display: "flex", flexDirection: "row", gap: '1rem', justifyContent: 'center'}}>
+      <section className="cards-container">
         {cardData.map((item, index) => (
           <BasicCard 
           key={index}
