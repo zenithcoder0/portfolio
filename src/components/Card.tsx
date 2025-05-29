@@ -9,20 +9,22 @@ type BasicCardProps = {
     title: string;
     summary: string;
     link: string;
-    image: string;
+    image?: string;
 }
 
-export default function BasicCard({title, summary, link}: BasicCardProps) {
+export default function BasicCard({title, summary, link, image}: BasicCardProps) {
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <Card sx={{ width: 600, display: 'flex', flexDirection: 'row', padding: 2}}>
        <CardMedia
         component="img"
         height="140"
         image={image}
         alt={title}
-      />
-      <CardContent>
-        <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 14 }}>
+        sx={{ width: '50%', height: '50%', objectFit: 'cover', flexShrink: 0 }}
+        />
+
+      <CardContent sx={{display: 'flex', flexDirection: 'column'}}>
+        <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 20}}>
           {title}
         </Typography>
         <Typography variant="body2">
@@ -33,10 +35,10 @@ export default function BasicCard({title, summary, link}: BasicCardProps) {
             </span>
           ))}
         </Typography>
-      </CardContent>
       <CardActions>
       <Button size="small" href={link} target="_blank" rel="noopener noreferrer">Check it out!</Button>
       </CardActions>
+      </CardContent>
     </Card>
   );
 }
